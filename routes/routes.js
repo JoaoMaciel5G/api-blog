@@ -4,10 +4,8 @@ const json_data = require("../articles.json")
 const router = express.Router()
 const {getArticleByNumber, getArticle ,getAllArticles} = require("../controller/controller")
 
-router.get("/", getAllArticles)
+router.get("/articles", getAllArticles)
 
-router.get("/article", getArticle)
-
-router.get("/:id", getArticleByNumber)
+router.get("/articles/:id", getArticleByNumber)
 
 module.exports = router

@@ -1,10 +1,6 @@
 const json_data = require("../articles.json")
 
 const getAllArticles = (request, response) => {
-    response.json(json_data)
-}
-
-const getArticle = (request, response) => {
     response.json(json_data.articles)
 }
 
@@ -17,6 +13,5 @@ const getArticleByNumber = (request, response) => {
 }
 module.exports = {
     getAllArticles,
-    getArticleByNumber,
-    getArticle
+    getArticleByNumber
 }
