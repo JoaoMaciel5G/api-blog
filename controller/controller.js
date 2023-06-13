@@ -4,15 +4,19 @@ const getAllArticles = (request, response) => {
     response.json(json_data)
 }
 
-const getArticleByNumber = (request, response) =>{
+const getArticle = (request, response) => {
+    response.json(json_data.articles)
+}
+
+const getArticleByNumber = (request, response) => {
     const id = request.params.id
 
     const article_by_id = json_data.articles.filter((item)=> item.id == id)
     
     response.json(article_by_id)
 }
-
 module.exports = {
     getAllArticles,
-    getArticleByNumber
+    getArticleByNumber,
+    getArticle
 }
