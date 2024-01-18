@@ -11,6 +11,7 @@ const getArticleByNumber = (request, response) => {
     
     response.json(article_by_id)
 }
+
 module.exports = {
     getAllArticles,
     getArticleByNumber
